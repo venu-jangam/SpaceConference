@@ -12,7 +12,17 @@ const firebaseConfig = {
   appId: "YOUR_APP_ID"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-export const googleProvider = new GoogleAuthProvider();
+// Initialize Firebase safely
+let app;
+let auth;
+let googleProvider;
+
+try {
+  app = initializeApp(firebaseConfig);
+  auth = getAuth(app);
+  googleProvider = new GoogleAuthProvider();
+} catch (error) {
+  console.warn("Firebase not configured: Authentication will not work until keys are added.");
+}
+
+export { auth, googleProvider };

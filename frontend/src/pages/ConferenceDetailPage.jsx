@@ -175,7 +175,7 @@ const ConferenceDetailPage = () => {
                       <div className="font-bold text-green-400">Bursaries Available</div>
                     </div>
                   </div>
-                </div>
+                )}
               </div>
 
               <div className="space-y-4">

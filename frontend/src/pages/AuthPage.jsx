@@ -28,6 +28,8 @@ const AuthPage = () => {
       alert('Login failed. Check console for details.');
     }
   };
+
+  return (
     <div className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
       {/* Background Ambience */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent-blue/5 blur-[120px] rounded-full -z-10" />
